@@ -1,2 +1,39 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System;
+
+class Program
+{
+
+    static void Main(string[] args)
+    {
+
+        Car car_1 = new Car();
+        car_1.Move();
+        Bicycle bicycle_1 = new Bicycle();
+        bicycle_1.Move();
+
+
+    }
+
+    public interface IMovable
+    {
+        void Move();
+    }
+
+    public class Car : IMovable
+    {
+        public void Move()
+        {
+            Console.WriteLine("The car is moving");
+        }
+    }
+
+    public class Bicycle : IMovable
+    {
+        public void Move()
+        {
+            Console.WriteLine("The bicycle is moving");
+        }
+    }
+
+
+}
